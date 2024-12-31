@@ -1,0 +1,35 @@
+{
+    "Model": {
+        "name":"counting",
+        "type": "fidtm",
+        "backbone": {
+            "name": "hrnet_w48",
+            "pretrained": true,
+            "out_indices": [
+                1,2,3,4
+            ],
+            "others":{
+            },
+            "train_backbone": true
+        },
+        "counting_head": {
+            "name": "HRSegMent"
+        },
+        "ckpt":""
+    },
+    "Dataset": {
+        "train": {
+            "ann_file": "dataset/sensecrowd/trainsmall.json",
+            "img_prefix": "/home/xinyan/hrcrowd/dataset/sensecrowd/train"
+        },
+        "val": {
+            "ann_file": "dataset/sensecrowd/valsmall.json",
+            "img_prefix": "/home/xinyan/hrcrowd/dataset/sensecrowd/val"
+        },
+        "test": {
+            "ann_file": "dataset/sensecrowd/testsmall.json",
+            "img_prefix": "/home/xinyan/hrcrowd/dataset/sensecrowd/test"
+        }
+    }
+
+}
