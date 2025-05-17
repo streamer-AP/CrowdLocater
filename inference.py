@@ -182,7 +182,7 @@ if __name__ == "__main__":
     parser.add_argument("--vis", action="store_true")
     parser.add_argument(
         "--ckpt",
-        default="weight.pth")
+        default="/home/xinyan/hrcrowd/locater_github/weight.pth")
     parser.add_argument("--local_rank", type=int)
     args = parser.parse_args()
 
